@@ -8,8 +8,8 @@ gulp.task('server', ['styles'], function() {
     	server: { baseDir: './app/'}
     });
     gulp.watch('./app/**/*.html').on('change', browserSync.reload);
-    // gulp.watch('./app/less/**/*.less', ['less']);
-    gulp.watch('./app/sass/**/*.scss', ['sass']);
+    gulp.watch('./app/less/**/*.less', ['styles']);
+    //gulp.watch('./app/sass/**/*.scss', ['sass']);
 });
 
 gulp.task('styles', function() {
